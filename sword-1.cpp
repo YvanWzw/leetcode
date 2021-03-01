@@ -71,31 +71,16 @@ int findRepeatNumber(vector<int>& nums) {
 	return returnNum;
 }
 
-
-
-int main() {
-	vector<int> nums;
-	nums.push_back(2);
-	nums.push_back(3);
-	nums.push_back(1);
-	nums.push_back(0);
-	nums.push_back(2);
-	nums.push_back(5);
-	nums.push_back(3);
-	cout << findRepeatNumber(nums);
-	return 0;
-}
-
 /*
-小结：
-解题方法很常见，较常用的有标记法、排序法等，尝试了用map/unordered_map/set/array四种方法，以leetcode的测试用例为标准：
+### 小结：
+解题方法很常见，较常用的有标记法、排序法等，尝试了用map/unordered_map/set/array四种，以leetcode的测试用例为标准：
 map和unordered_map耗时接近，后者占用空间稍小于前者（27.9MB VS 28.7MB）
 array的时间消耗与空间消耗都远小于上两者（72ms VS 212ms, 23.1MB VS 27.9MB)
 同时测试了用常数标记与bool标记两种，两者耗时接近（测试中bool耗时要高于常数，但在波动误差范围内，可忽略），bool占用空间更小
 set的耗时与空间消耗介于map与array之间（152ms, 28.5MB）
 但是同样的算法，还是远不如C++题解的27ms
 
-评论区：
+### 评论区：
 根据实际情况
 如果时间优先则使用map
 如果空间优先则使用指针+原地排序数组
